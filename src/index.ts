@@ -3,8 +3,8 @@ import * as THREE from "three";
 import camera from "./config/camera";
 import lights from "./config/lights";
 import renderer from "./config/renderer";
-import floor from "./models/floor";
-import walls from "./models/office";
+import floor from "./objects/floor";
+import walls from "./objects/office";
 
 THREE.Object3D.DefaultUp = new THREE.Vector3(0, 0, 1);
 
@@ -15,7 +15,7 @@ floor.receiveShadow = true;
 lights.forEach((light) => scene.add(light));
 
 const bulbGeometry = new THREE.SphereBufferGeometry(0.02, 16, 8);
-const bulbLight = new THREE.PointLight(0x0000FF, 1, 100, 2);
+const bulbLight = new THREE.PointLight(0xFFFFFF, 1, 100, 2);
 const bulbMat = new THREE.MeshStandardMaterial({
   emissive: 0xffffee,
   emissiveIntensity: .77,
