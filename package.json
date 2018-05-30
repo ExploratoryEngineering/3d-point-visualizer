@@ -7,9 +7,9 @@
     "prebuild": "rimraf dist",
     "build": "parcel build index.html",
     "dev": "parcel index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
-  "author": "",
+  "author": "Per Kristian Kummermo",
   "license": "Apache-2.0",
   "dependencies": {
     "images": "^3.0.1",
