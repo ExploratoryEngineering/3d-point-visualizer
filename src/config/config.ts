@@ -1,3 +1,3 @@
 export const config = {
-  scale: 4
+  scale: 4,
 };

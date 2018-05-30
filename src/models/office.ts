@@ -1,5 +1,5 @@
-import { Wall } from "./wall";
 import * as THREE from "three";
+import { Wall } from "./wall";
 
 const wallMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const walls: THREE.Mesh[] = [];

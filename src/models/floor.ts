@@ -1,14 +1,12 @@
 import * as THREE from "three";
 import images from "../../images/*";
 
-console.log(images);
-
 const geometry = new THREE.PlaneBufferGeometry(100, 100);
-var material = new THREE.MeshStandardMaterial({
+const material = new THREE.MeshStandardMaterial({
   roughness: 0.8,
   color: 0xffffff,
   metalness: 0.2,
-  bumpScale: 0.0005
+  bumpScale: 0.0005,
  });
 
 const textureLoader = new THREE.TextureLoader();
@@ -37,7 +35,7 @@ textureLoader.load(images["hardwood2_roughness.jpg"], function (map) {
   material.needsUpdate = true;
 });
 
-var floor = new THREE.Mesh(geometry, material);
+const floor = new THREE.Mesh(geometry, material);
 floor.receiveShadow = true;
 
 export default floor;

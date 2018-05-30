@@ -7,7 +7,8 @@
     "prebuild": "rimraf dist",
     "build": "parcel build index.html",
     "dev": "parcel index.html",
-    "test": "exit 0"
+    "test": "npm run test:tslint",
+    "test:tslint": "tslint \"src/**/*.ts\""
   },
   "author": "Per Kristian Kummermo",
   "license": "Apache-2.0",
@@ -18,8 +19,10 @@
     "three": "^0.92.0"
   },
   "devDependencies": {
+    "@telenorfrontend/tslint-config-telenor": "^0.1.1",
     "@types/three": "^0.92.3",
     "rimraf": "^2.6.2",
+    "tslint": "^5.10.0",
     "typescript": "^2.8.3"
   }
 }
