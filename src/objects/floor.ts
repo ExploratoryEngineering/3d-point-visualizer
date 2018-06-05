@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import images from "../../images/*";
 
-const geometry = new THREE.PlaneBufferGeometry(100, 100);
+const geometry = new THREE.PlaneBufferGeometry(60, 60);
 const material = new THREE.MeshStandardMaterial({
   roughness: 0.8,
   color: 0xffffff,
