@@ -1,14 +1,20 @@
 import * as THREE from "three";
 
-const sensorBulb = new THREE.PointLight(0xFFFFFF, 1, 100, 2);
-const bulbGeometry = new THREE.SphereBufferGeometry(0.02, 16, 8);
-const bulbMat = new THREE.MeshStandardMaterial({
-  emissive: 0xffffee,
-  emissiveIntensity: .77,
-  color: 0x000000,
-});
-sensorBulb.add(new THREE.Mesh(bulbGeometry, bulbMat));
-sensorBulb.position.set(0, 0, 2);
-sensorBulb.castShadow = true;
+const sensorBuilder = {
+  create: (color = 0xFFFFFF, lightColor = 0xFFFFFF): THREE.PointLight => {
+    const sensorBulb = new THREE.PointLight(lightColor, .54, 100, 2);
+    const bulbGeometry = new THREE.SphereBufferGeometry(0.15, 16, 8);
+    const bulbMat = new THREE.MeshStandardMaterial({
+      emissive: 0xffffee,
+      emissiveIntensity: .77,
+      color: color,
+    });
 
-export default sensorBulb;
+    sensorBulb.add(new THREE.Mesh(bulbGeometry, bulbMat));
+    sensorBulb.castShadow = true;
+
+    return sensorBulb;
+  },
+};
+
+export default sensorBuilder;

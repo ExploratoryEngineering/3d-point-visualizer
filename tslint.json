@@ -1,3 +1,6 @@
 {
-  "extends": "@telenorfrontend/tslint-config-telenor"
+  "extends": "@telenorfrontend/tslint-config-telenor",
+  "rules": {
+    "no-console": false
+  }
 }
